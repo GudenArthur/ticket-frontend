@@ -12,7 +12,7 @@ export default function Comprar() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post("https://TU-API-RAILWAY.app/comprar", form);
+      const res = await axios.post("ticket-api-production-33bb.up.railway.app/comprar", form);
       router.push(`/confirmacion?ticketId=${res.data.ticketId}`);
     } catch (error) {
       setMensaje("Error en la compra. Intenta de nuevo.");
